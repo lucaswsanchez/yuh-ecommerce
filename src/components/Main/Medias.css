@@ -1,0 +1,97 @@
+.medias-container {
+  width: 100%;
+}
+
+.medias-header {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../../assets/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.medias-header h2 {
+  font-family: "Krona One";
+  text-align: center;
+}
+
+.filtro {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.filtro select {
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-weight: bold;
+  cursor: pointer;
+  color: #7b7b7b;
+  background-color: #00000009;
+  padding: 0 10px 0 10px;
+}
+
+.productos {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0 20px 0;
+  gap: 80px;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product img {
+  width: 220px;
+  border-radius: 5px 5px 0 0;
+}
+
+.product figcaption {
+  width: 100%;
+  font-size: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 15px 0 15px 0;
+  background-color: #00000015;
+  border-radius: 0 0 5px 5px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding-bottom: 20px;
+}
+
+.pagination button {
+  padding: 6px 10px 6px 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.pagination button:hover {
+  cursor: pointer;
+}
+
+.pagination button.active {
+  background-color: #8f8f8f;
+  color: white;
+}
+
+@media (max-width: 500px) {
+  .productos {
+    gap: 40px;
+  }
+}

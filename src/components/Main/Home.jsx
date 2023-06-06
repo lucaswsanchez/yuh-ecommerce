@@ -1,26 +1,27 @@
 import "./Home.css";
 import { Link } from "react-router-dom";
-import medias from "../../assets/adidasfrancia.png";
-import soquetes from "../../assets/caritayrayo.png";
+import medias from "../../assets/medias.png";
+import soquetes from "../../assets/soquetes.png";
 
 const Home = () => {
   return (
     <div className="home">
-      <h2>BIENVENIDO A NUESTRA PAGINA WEB!</h2>
-      <h4>¿QUE ESTAS BUSCANDO?</h4>
+      <div className="home-header">
+        <h3>¿QUE ESTAS BUSCANDO?</h3>
+      </div>
       <div className="medias-soquetes">
-        <div className="medias">
-          <img src={medias} alt="medias" />
-          <Link to="/medias">
-            <button>Medias</button>
-          </Link>
-        </div>
-        <div className="soquetes">
-          <img src={soquetes} alt="soquetes" />
-          <Link to="/soquetes">
-            <button>Soquetes</button>
-          </Link>
-        </div>
+        <Link className="white" to="/medias">
+          <div className="medias">
+            <img src={medias} alt="medias" />
+            <button>MEDIAS</button>
+          </div>
+        </Link>
+        <Link className="white" to="/soquetes">
+          <div className="soquetes">
+            <img src={soquetes} alt="soquetes" />
+            <button>SOQUETES</button>
+          </div>
+        </Link>
       </div>
     </div>
   );

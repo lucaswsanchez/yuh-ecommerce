@@ -1,7 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Krona One");
 
 * {
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  background-image: url("./assets/mainbackground.png");
+  background-size: 60%;
 }
 
 header {
@@ -9,9 +15,7 @@ header {
   justify-content: center;
   align-items: center;
   height: 100px;
-  background-image: url("./assets/background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #00000026;
 }
 
 main {
@@ -20,13 +24,9 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("./assets/mainbackground.png");
-  background-size: contain;
 }
 
 footer {
-  height: 100px;
-  background-image: url("./assets/background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  height: 100%;
+  background-color: #00000026;
 }
