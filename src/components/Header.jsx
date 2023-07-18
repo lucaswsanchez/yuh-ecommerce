@@ -1,10 +1,13 @@
 import "./Header.css";
 import yuhlogo from "../assets/logo-yuh.png";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <div className="header">
-      <img src={yuhlogo} alt="yuhlogo" />
+      <Link to="/">
+        <img src={yuhlogo} alt="yuhlogo" />
+      </Link>
     </div>
   );
 };

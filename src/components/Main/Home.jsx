@@ -1,7 +1,7 @@
 import "./Home.css";
 import { Link } from "react-router-dom";
-import medias from "../../assets/medias.png";
-import soquetes from "../../assets/soquetes.png";
+import medias from "../../assets/medias.webp";
+import soquetes from "../../assets/soquetes.webp";
 
 const Home = () => {
   return (

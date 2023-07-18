@@ -76,3 +76,21 @@
   }
 }
 
+@media (max-width: 300px) {
+  .home-header h3 {
+    font-size: 14px;
+  }
+
+  .medias,
+  .soquetes {
+    width: 260px;
+  }
+
+  .medias-soquetes img {
+    width: 260px;
+  }
+
+  .medias-soquetes button {
+    font-size: 16px;
+  }
+}

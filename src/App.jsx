@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./components/Main/Home";
 import Medias from "./components/Main/Medias";
@@ -13,13 +13,11 @@ function App() {
         <Header />
       </header>
       <main>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/medias" element={<Medias />} />
-            <Route path="/soquetes" element={<Soquetes />} />
-          </Routes>
-        </BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/medias" element={<Medias />} />
+          <Route path="/soquetes" element={<Soquetes />} />
+        </Routes>
       </main>
       <footer>
         <Footer />

@@ -95,3 +95,17 @@
     gap: 40px;
   }
 }
+
+@media (max-width: 300px) {
+   .medias-header h2 {
+    font-size: 20px
+   }
+
+  .pagination {
+    gap: 8px;
+  }
+
+  .pagination button {
+    padding: 3px 7px 3px 7px;
+  }
+}
