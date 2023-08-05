@@ -4,6 +4,7 @@ import "./Soquetes.css";
 
 const Soquetes = () => {
   const [productos, setProductos] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const obtenerProductos = async () => {
@@ -14,9 +15,11 @@ const Soquetes = () => {
 
         if (data) {
           setProductos(data.soquetes);
+          setLoading(false);
         }
       } catch (error) {
         console.log("Error al obtener los productos:", error);
+        setLoading(false);
       }
     };
 
@@ -28,14 +31,20 @@ const Soquetes = () => {
       <div className="soquetes-header">
         <h2>SOQUETES</h2>
       </div>
-      <div className="productos">
-        {productos.map((producto) => (
-          <figure className="product" key={producto.nombre}>
-            <img src={producto.imagen} alt={producto.nombre} />
-            <figcaption>{producto.nombre}</figcaption>
-          </figure>
-        ))}
-      </div>
+      {loading ? (
+        <div className="loader-container">
+          <div className="loader"></div>
+        </div>
+      ) : (
+        <div className="productos">
+          {productos.map((producto) => (
+            <figure className="product" key={producto.nombre}>
+              <img src={producto.imagen} alt={producto.nombre} />
+              <figcaption>{producto.nombre}</figcaption>
+            </figure>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

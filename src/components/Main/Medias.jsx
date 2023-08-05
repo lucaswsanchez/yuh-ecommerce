@@ -4,6 +4,7 @@ import "./Medias.css";
 
 const Medias = () => {
   const [productos, setProductos] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [marcaFiltrada, setMarcaFiltrada] = useState("");
   const [productosFiltrados, setProductosFiltrados] = useState([]);
   const [paginaActual, setPaginaActual] = useState(1);
@@ -18,9 +19,11 @@ const Medias = () => {
 
         if (data) {
           setProductos(data.medias);
+          setLoading(false);
         }
       } catch (error) {
         console.log("Error al obtener los productos:", error);
+        setLoading(false);
       }
     };
 
@@ -95,15 +98,25 @@ const Medias = () => {
           <option value="Otras">Otras</option>
         </select>
       </div>
-      <div className="productos">
-        {elementosAMostrar.map((producto) => (
-          <figure className="product" key={producto.nombre}>
-            <img src={producto.imagen} alt={producto.nombre} />
-            <figcaption>{producto.nombre}</figcaption>
-          </figure>
-        ))}
-      </div>
-      <div className="pagination">{numerosPagina.map((numero) => numero)}</div>
+      {loading ? (
+        <div className="loader-container">
+          <div className="loader"></div>
+        </div>
+      ) : (
+        <div>
+          <div className="productos">
+            {elementosAMostrar.map((producto) => (
+              <figure className="product" key={producto.nombre}>
+                <img src={producto.imagen} alt={producto.nombre} />
+                <figcaption>{producto.nombre}</figcaption>
+              </figure>
+            ))}
+          </div>
+          <div className="pagination">
+            {numerosPagina.map((numero) => numero)}
+          </div>
+        </div>
+      )}
     </div>
   );
 };

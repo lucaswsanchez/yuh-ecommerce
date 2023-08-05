@@ -20,14 +20,15 @@
 }
 
 .medias-soquetes {
-  padding: 50px 0 50px 0;
+  padding: 80px 0 80px 0;
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 80px;
 }
 
 .medias-soquetes img {
-  width: 300px;
+  width: 400px;
 }
 
 .medias-soquetes button {
@@ -63,16 +64,15 @@
   text-decoration: none;
 }
 
-@media (max-width: 670px) {
+@media (max-width: 900px) {
   .medias-soquetes {
     flex-direction: column;
     gap: 40px;
+    padding: 40px 0 40px 0;
   }
 
-  .medias,
-  .soquetes {
-    width: 305px;
-    margin: auto;
+  .medias-soquetes img {
+    width: 300px;
   }
 }
 
